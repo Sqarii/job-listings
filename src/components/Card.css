@@ -1,0 +1,115 @@
+.card-cont {
+    width: 330px;
+    background-color: #fff;
+    border-radius: 8px;
+    border-left: 5px solid hsl(180, 29%, 50%);
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    margin-bottom: 2rem;
+    box-shadow: 8px 8px 24px -12px hsl(180, 8%, 52%);
+}
+
+/* image logo */
+.card-logo {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-first-line {
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5rem 0 0.5rem;
+    gap: 0.5rem;
+}
+
+/* company name */
+.card-company {
+    margin: 0 1rem 0 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+}
+
+/* new, featured */
+.card-new,
+.card-featured {
+    color: #fff;
+    font-size: 13px;
+    height: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-new {
+    background-color: hsl(180, 29%, 50%);
+}
+
+.card-featured {
+    background-color: hsl(180, 14%, 20%);
+}
+
+/* company level e.g. senior, fullstack, junior etc.*/
+.card-position {
+    font-size: 15px;
+    font-weight: 700;
+    color: hsl(180, 14%, 20%);
+    margin: 0.5rem 0;
+}
+
+.card-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    color: hsl(180, 8%, 52%);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+hr {
+    color: hsl(180, 8%, 52%);
+    width: 100%;
+}
+
+/* tags */
+.card-tags {
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 0.5rem 0 0;
+}
+
+.card-tag {
+    padding: 0.5rem;
+    color: hsl(180, 29%, 50%);
+    font-size: 15px;
+    font-weight: 700;
+    background-color: hsl(180, 31%, 95%);
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.card-tag:hover {
+    color: hsl(180, 31%, 95%);
+    background-color: hsl(180, 29%, 50%);
+    transition: 0.2s;
+}
