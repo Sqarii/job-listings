@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Card.css";
 // import Photosnap from "./imgs/photosnap.svg";
 
@@ -10,8 +10,25 @@ const Card = (props) => {
     const [tools, setTools] = useState(props.tools);
     // console.log(language);
 
+    const cardFilters = {
+        role: props.role,
+        level: props.level,
+        languages: [props.languages],
+        tools: [props.tools],
+    };
+
+    const getFilter = (filter) => {
+        props.addFilter(filter);
+    };
+
     return (
-        <section className="card-cont">
+        <section
+            className="card-cont"
+            data-role=""
+            data-level=""
+            data-languages=""
+            data-tools=""
+        >
             <img className="card-logo" src={image} alt="logo" />
             <div className="card">
                 <div className="card-first-line">
@@ -35,16 +52,42 @@ const Card = (props) => {
                 </div>
                 <hr />
                 <div className="card-tags">
-                    <button className="card-tag">{props.role}</button>
-                    <button className="card-tag">{props.level}</button>
+                    <button
+                        onClick={() => {
+                            getFilter(props.role);
+                        }}
+                        className="card-tag"
+                    >
+                        {props.role}
+                    </button>
+                    <button
+                        onClick={() => {
+                            getFilter(props.level);
+                        }}
+                        className="card-tag"
+                    >
+                        {props.level}
+                    </button>
 
                     {language.map((n, id) => (
-                        <button key={id} className="card-tag">
+                        <button
+                            key={id}
+                            className="card-tag"
+                            onClick={() => {
+                                getFilter(n);
+                            }}
+                        >
                             {n}
                         </button>
                     ))}
                     {tools.map((n, id) => (
-                        <button key={id} className="card-tag">
+                        <button
+                            key={id}
+                            className="card-tag"
+                            onClick={() => {
+                                getFilter(n);
+                            }}
+                        >
                             {n}
                         </button>
                     ))}
