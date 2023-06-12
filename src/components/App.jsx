@@ -89,10 +89,31 @@ const App = () => {
                 )}
             </header>
 
-            {data.map((data) => {
-                if (filter.length > 0) {
-                    let cardData = Object.values(data).flat(1);
-                    if (filter.every((r) => cardData.includes(r))) {
+            <main>
+                {data.map((data) => {
+                    if (filter.length > 0) {
+                        let cardData = Object.values(data).flat(1);
+                        if (filter.every((r) => cardData.includes(r))) {
+                            return (
+                                <Card
+                                    key={data.id}
+                                    company={data.company}
+                                    logo={data.logo}
+                                    new={data.new}
+                                    featured={data.featured}
+                                    position={data.position}
+                                    role={data.role}
+                                    level={data.level}
+                                    postedAt={data.postedAt}
+                                    contract={data.contract}
+                                    location={data.location}
+                                    languages={data.languages}
+                                    tools={data.tools}
+                                    addFilter={addFilter}
+                                />
+                            );
+                        }
+                    } else {
                         return (
                             <Card
                                 key={data.id}
@@ -112,27 +133,8 @@ const App = () => {
                             />
                         );
                     }
-                } else {
-                    return (
-                        <Card
-                            key={data.id}
-                            company={data.company}
-                            logo={data.logo}
-                            new={data.new}
-                            featured={data.featured}
-                            position={data.position}
-                            role={data.role}
-                            level={data.level}
-                            postedAt={data.postedAt}
-                            contract={data.contract}
-                            location={data.location}
-                            languages={data.languages}
-                            tools={data.tools}
-                            addFilter={addFilter}
-                        />
-                    );
-                }
-            })}
+                })}
+            </main>
         </>
     );
 };

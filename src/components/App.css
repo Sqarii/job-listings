@@ -30,6 +30,12 @@ div {
     justify-content: flex-start;
 }
 
+main {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .header {
     background-color: hsl(180, 29%, 50%);
     height: 156px;
