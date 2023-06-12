@@ -6,10 +6,10 @@ import data from "./data.json";
 
 const App = () => {
     const banner = require("./images/bg-header-mobile.svg").default;
+    const bannerDesktop = require("./images/bg-header-desktop.svg").default;
     const removeIcon = require("./images/icon-remove.svg").default;
 
     const [filter, setFilter] = useState([]);
-    const [cardFilters, setCardFilters] = useState({});
 
     const addFilter = (f) => {
         setFilter((prev) => {
@@ -41,10 +41,25 @@ const App = () => {
         setFilter([]);
     };
 
+    const localStyle = {
+        marginBottom: filter.length > 0 ? "86px" : "56px",
+    };
+
     return (
         <>
-            <header className="header">
-                <img src={banner} alt="banner" />
+            <header style={localStyle} className="header">
+                {/* {window.innerWidth < 768 ? (
+                    <img src={banner} alt="banner" />
+                ) : (
+                    <img src={bannerDesktop} alt="banner" />
+                )} */}
+
+                <img className="banner-mobile" src={banner} alt="banner" />
+                <img
+                    className="banner-desktop"
+                    src={bannerDesktop}
+                    alt="banner"
+                />
 
                 {filter.length > 0 && (
                     <section className="filter-cont">

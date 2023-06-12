@@ -70,6 +70,10 @@
     font-weight: 700;
     color: hsl(180, 14%, 20%);
     margin: 0.5rem 0;
+    cursor: pointer;
+}
+.card-position:hover {
+    color: hsl(180, 29%, 50%);
 }
 
 .card-info {
@@ -112,4 +116,46 @@ hr {
     color: hsl(180, 31%, 95%);
     background-color: hsl(180, 29%, 50%);
     transition: 0.2s;
+}
+
+@media only screen and (min-width: 768px) {
+    .card-cont {
+        width: 80%;
+        max-width: 1100px;
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .card-logo {
+        position: static;
+        width: 88px;
+        height: 88px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 1rem;
+        gap: 4rem;
+    }
+
+    .card-informations {
+        flex-direction: column;
+    }
+
+    .card-position {
+        font-size: 1.5rem;
+    }
+
+    .card-tags {
+        flex-direction: row-reverse;
+        margin: 0;
+    }
 }

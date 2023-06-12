@@ -31,24 +31,26 @@ const Card = (props) => {
         >
             <img className="card-logo" src={image} alt="logo" />
             <div className="card">
-                <div className="card-first-line">
-                    <h1 className="card-company">{props.company}</h1>
-                    {props.new && (
-                        <button disabled className="card-new">
-                            NEW!
-                        </button>
-                    )}
-                    {props.featured && (
-                        <button disabled className="card-featured">
-                            FEATURED
-                        </button>
-                    )}
-                </div>
-                <h2 className="card-position">{props.position}</h2>
-                <div className="card-info">
-                    <span className="postedAt">{props.postedAt}</span>
-                    <span className="contract">{props.contract}</span>
-                    <span className="location">{props.location}</span>
+                <div className="card-informations">
+                    <div className="card-first-line">
+                        <h1 className="card-company">{props.company}</h1>
+                        {props.new && (
+                            <button disabled className="card-new">
+                                NEW!
+                            </button>
+                        )}
+                        {props.featured && (
+                            <button disabled className="card-featured">
+                                FEATURED
+                            </button>
+                        )}
+                    </div>
+                    <h2 className="card-position">{props.position}</h2>
+                    <div className="card-info">
+                        <span className="postedAt">{props.postedAt}</span>
+                        <span className="contract">{props.contract}</span>
+                        <span className="location">{props.location}</span>
+                    </div>
                 </div>
                 <hr />
                 <div className="card-tags">
