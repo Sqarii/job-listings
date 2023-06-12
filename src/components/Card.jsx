@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Card.css";
-// import Photosnap from "./imgs/photosnap.svg";
 
 const Card = (props) => {
     const image = require(`./images/${props.logo}`);
@@ -9,13 +8,6 @@ const Card = (props) => {
     const [language, setLanguage] = useState(props.languages);
     const [tools, setTools] = useState(props.tools);
     // console.log(language);
-
-    const cardFilters = {
-        role: props.role,
-        level: props.level,
-        languages: [props.languages],
-        tools: [props.tools],
-    };
 
     const getFilter = (filter) => {
         props.addFilter(filter);

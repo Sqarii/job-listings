@@ -1,7 +1,7 @@
 {
     "name": "jobs-listings",
     "version": "0.1.0",
-    "homepage": "https://Sqarii.github.io/jobs-listings",
+    "homepage": "https://sqarii.github.io/jobs-listings",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",

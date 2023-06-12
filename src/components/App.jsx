@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import ReactDom from "react-dom/client";
+import React, { useState } from "react";
 import Card from "./Card";
 import "./App.css";
 import data from "./data.json";
@@ -9,7 +8,15 @@ const App = () => {
     const bannerDesktop = require("./images/bg-header-desktop.svg").default;
     const removeIcon = require("./images/icon-remove.svg").default;
 
-    const [filter, setFilter] = useState([]);
+    const [filter, setFilter] = useState(
+        localStorage.getItem("filters")
+            ? JSON.parse(localStorage.getItem("filters"))
+            : []
+    );
+
+    React.useEffect(() => {
+        localStorage.setItem("filters", JSON.stringify(filter));
+    }, [filter]);
 
     const addFilter = (f) => {
         setFilter((prev) => {
@@ -19,15 +26,6 @@ const App = () => {
             });
             return newArray;
         });
-
-        // setFilter((prev) => {
-        //     if (prev.indexOf(f) === -1) {
-        //         console.log("item doesnt exist");
-        //         return [...prev, f];
-        //     } else {
-        //         console.log("item already exists");
-        //     }
-        // });
     };
 
     const deleteCurrentFilter = (value) => {
@@ -48,12 +46,6 @@ const App = () => {
     return (
         <>
             <header style={localStyle} className="header">
-                {/* {window.innerWidth < 768 ? (
-                    <img src={banner} alt="banner" />
-                ) : (
-                    <img src={bannerDesktop} alt="banner" />
-                )} */}
-
                 <img className="banner-mobile" src={banner} alt="banner" />
                 <img
                     className="banner-desktop"
