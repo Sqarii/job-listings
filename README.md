@@ -1,4 +1,4 @@
-https://sqarii.github.io/jobs-listings/ <br /> <br />
+https://sqarii.github.io/jobs-listings/ <br /> 
 
 # Jobs listings
 This project is a job application that allows users to filter job offers. It provides a user-friendly interface based on project on frontendmentor.io
