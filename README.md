@@ -19,4 +19,4 @@ This project is licensed under the MIT License.
 
 Szymon Rutyna <br />
 szmn.rtn@gmail.com <br />
-[[Optional: Link to your website or portfolio]](https://www.linkedin.com/in/szymon-rutyna/)
+https://www.linkedin.com/in/szymon-rutyna
