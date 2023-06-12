@@ -1,19 +1,19 @@
-React App Jobs
+# Jobs listings
 This project is a job application that allows users to filter job offers. It provides a user-friendly interface based on project on frontendmentor.io
 
-Features
+# Features
 Filtering
 Saved Filters in localStorage
 Responsive Design
 
-Technologies Used
+# Technologies Used
 React
 CSS
 
 
 If you have any questions or suggestions feel free to write
 
-License
+# License
 This project is licensed under the MIT License.
 
 
